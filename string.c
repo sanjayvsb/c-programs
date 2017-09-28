@@ -2,7 +2,7 @@
 #include<string.h>
  
 int main() {
-   char str[100], temp;
+   char str[100], t;
    int i, j = 0;
  
    printf("\nEnter the string :");
@@ -12,9 +12,9 @@ int main() {
    j = strlen(str) - 1;
  
    while (i < j) {
-      temp = str[i];
+      t = str[i];
       str[i] = str[j];
-      str[j] = temp;
+      str[j] = t;
       i++;
       j--;
    }
