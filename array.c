@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+void main()
+{
+   long int a[20],i,j,n,t,c;
+   long int s=0;
+   clrscr();
+   scanf("%ld",&n);
+for(i=0;i<n;i++)
+{
+  scanf("%d",&a[i]);
+}
+for(i=0;i<n;i++)
+{
+ for(j=i+1;j<n;j++)
+ {
+  if(a[j]>a[i])
+ {
+  t=a[i];
+  a[i]=a[j];
+  a[j]=t;
+ }
+ }
+}
+for(i=0;i<n-1;i++)
+{
+  t=a[i+1];
+  c=0;
+  while(t!=0)
+  {
+    t=t/10;
+    c++;
+  }
+  s=(s*pow(10,c))+a[i+1];
+}
+printf("\n%ld",s);
+getch();
+}
